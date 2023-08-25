@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import User from './user.css';
+// import from './user.css';
 
 const Registerclassform = () => {
+
 
     const [formData, setFormData] = useState({
         organizationName: '',
@@ -79,7 +80,7 @@ const Registerclassform = () => {
             onChange={handleChange}
           />
         </div>
-        <button className='req-btn' type="submit">Register</button>
+        <button className='req-btn' type="submit">Submit Request</button>
       </form>
     </div>
   )

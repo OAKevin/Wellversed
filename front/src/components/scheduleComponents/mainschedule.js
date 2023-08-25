@@ -10,7 +10,7 @@ import getDay from "date-fns/getDay";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import Modal from "react-modal";
 import React, { useState, useEffect } from "react";
-import DatePicker from "react-date-picker";
+// import DatePicker from "react-date-picker";
 
 // icons
 // import { FaCheck } from "react-icons/fa";
@@ -58,19 +58,19 @@ const Mainschedule = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
 
-  const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "", description: "" });
-  const [allEvents, setAllEvents] = useState(events);
+  // const [newEvent] = useState({ title: "", start: "", end: "", description: "" });
+  const [allEvents] = useState(events);
 
   const [isClosingModal, setIsClosingModal] = useState(false);
 
-  function handleAddEvent() {
-    setAllEvents([...allEvents, newEvent]);
-  }
+  // function handleAddEvent() {
+  //   setAllEvents([...allEvents, newEvent]);
+  // }
 
-  function handleEventClick(event) {
-    setSelectedEvent(event);
-    setIsModalOpen(true);
-  }
+  // function handleEventClick(event) {
+  //   setSelectedEvent(event);
+  //   setIsModalOpen(true);
+  // }
 
   const [isSignedUp, setIsSignedUp] = useState(false);
 

@@ -1,5 +1,6 @@
 import React from "react";
 
+
 // components
 import Calendar from "./calendar";
 
@@ -145,7 +146,20 @@ const Userpf = () => {
         <Calendar />
 
         {/* <Link to="/volunteerSchedule"> */}
-        <button>Find More Volunteer Opportunities</button>
+        <Link to="/schedule"
+        style={{
+          textDecoration: 'none',
+          padding: '10px',
+          background: 'rgb(148, 13, 13)',
+          color: 'white',
+          borderRadius: '30px',
+          border: 'none',
+          cursor: 'pointer',
+          width: '30%',
+          textAlign: 'center'
+          }}
+        >Go To Full Schedule</Link>
+        
         {/* </Link> */}
       </div>
     </div>
