@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 
 
 const Courselist = () => {
+    const isMobile = window.innerWidth <= 480;
 
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -61,10 +62,36 @@ const Courselist = () => {
             </tr>
 
         </table>
+
+        <section className='mobile-course-view'>
+            <p>Event: Financial Literacy 101 <br/> 
+            Date: 8/31/2023 <br/> 
+            Time: 8am-4pm <br/>
+            Instructor Assigned: Yes <br/>
+            Instructor Information: Jane Doe; jdoe@gmail.com <br/><br/>
+
+            Event: Mastering Investing Strategies <br/> 
+            Date: 8/31/2023 <br/> 
+            Time: 8am-4pm <br/>
+            Instructor Assigned: No <br/>
+            Instructor Information: n/a <br/><br/>
+
+            Event: Affordable Housing Essentials <br/> 
+            Date: 8/31/2023 <br/> 
+            Time: 8am-4pm <br/>
+            Instructor Assigned: Yes <br/>
+            Instructor Information: Jane Doe; jdoe@gmail.com <br/><br/>
+            
+            </p>
+        </section>
+
+
+
+
         <br/>
         <div className='courselist-btn-styling'>
         <Link to="/schedule" className='courselist-btn' style={{
-             marginLeft: '60px',
+             marginLeft: isMobile ? '30px' : '50px',
              textDecoration: 'none',
              padding: '10px',
              background: 'rgb(148, 13, 13)',
@@ -74,23 +101,27 @@ const Courselist = () => {
              cursor: 'pointer',
              width: '30%',
              textAlign: 'center'
+             
              }}>View Full Schedule Here</Link>
         <button className='courselist-btn'onClick={openModal} 
         style={{
-            marginLeft: '80px',
+            marginLeft: '10px',
             textDecoration: 'none',
-             padding: '10px',
+             padding: isMobile ? '10px 2px 5px' : '10px',
+            //  margin: isMobile ? "10px ",
              background: 'rgb(148, 13, 13)',
              color: 'white',
              borderRadius: '30px',
              border: 'none',
              cursor: 'pointer',
-             width: '30%',
+             width: isMobile ? '30%' : '40%',
              textAlign: 'center',
-             fontSize: '1em'
+             fontSize: isMobile ? '12px' : '1em'
             }}
             >Request To Add Opportunities</button>
         </div>
+
+
 
         {/* Modal */}
         <Modal 

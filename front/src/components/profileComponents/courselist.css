@@ -26,16 +26,40 @@ table {
     line-height: 1.8;
     text-align: center;
   }
-   .courselist-btn {
-    text-decoration: none;
 
-    padding: 10px  5 20px;
+  /* mobile course list */
+
+  .mobile-course-view {
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+    .course-list-title {
+      font-size: 20px;
+    }
+  }
+  
+  /* Media query for mobile screens */
+  @media screen and (max-width: 480px) {
+    .course-list-title {
+      font-size: 20px;
+      line-height: 1.3;
+    }
+      table {
+        display: none;
+      }
+      .mobile-course-view {
+        padding-top: 20px;
+        display: block;
+      }
+
+      .courselist-btn {
+        padding: 15px;
     background: rgb(148, 13, 13);
     color: white;
     border-radius: 30px;
     border: none;
     cursor: pointer;
-    width: 30%;
-    
-  }
- 
+    opacity: 1;
+    transition: 0.3s;
+      }
+    }
